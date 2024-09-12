@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet" async>
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Contact form</title>
+</head>
+<body>
+  <main>
+    <section class="form-section">
+      <h2>Contact Us</h2>
+      <form action="" class="my-form" id="myForm" novalidate>
+        <div class="name">
+          <div class="first-name input-field">
+            <label for="firstName">
+              First Name
+              <span class="required-icon">*</span>
+            </label>
+            <input type="text" id="firstName" name="firstName" aria-required="true" aria-label="First Name" required>
+            <div class="err-message" aria-live="polite">
+              This field is required
+            </div>
+          </div>
+          <div class="last-name input-field">
+            <label for="lastName">
+              Last Name
+              <span class="required-icon">*</span>
+            </label>
+            <input type="text" id="lastName" name="lastName" aria-required="true" aria-label="Last Name" required>
+            <div class="err-message" aria-live="polite">
+              This field is required
+            </div>
+          </div>
+        </div>
+        <div class="email-address input-field">
+          <label for="emailAddress">
+            Email Address
+            <span class="required-icon">*</span>
+          </label>
+          <input type="email" name="emailAddress" id="emailAddress" aria-required="true" aria-label="Email Address" required>
+          <div class="validation-message">
+            Please enter a valid email address
+          </div>
+        </div>
+        <div class="query-type">
+          <fieldset>
+            <legend>
+              Query Type
+              <span class="required-icon">*</span>
+            </legend>
+            <div class="radio-inputs">
+              <label for="generalEnquiry">
+                <input type="radio" id="generalEnquiry" name="queryType" value="General Enquiry" aria-label="General Enquiry" class="custom-radio">
+                <span class="custom-radio-button"></span>
+                General Enquiry
+              </label>
+              <label for="supportRequest">
+                <input type="radio" name="queryType" id="supportRequest" value="Support Request" aria-label="Support Request" class="custom-radio">
+                <span class="custom-radio-button"></span>
+                Support Request
+              </label>
+            </div>
+            <div class="err-message" aria-live="polite">
+              Please select a query type
+            </div>
+          </fieldset>
+        </div>
+        <div class="message-field input-field">
+          <label for="message">
+            Message
+            <span class="required-icon">*</span>
+          </label>
+          <textarea name="message" id="message" cols="30" rows="4"></textarea>
+          <div class="err-message" aria-live="polite">
+            This field is required
+          </div>
+        </div>
+        <div class="terms-and-conditions">
+          <label for="terms" class="terms">
+            <input type="checkbox" name="terms" id="terms" class="custom-checkbox" aria-level="Terms">
+            <span class="custom-checkbox-button"></span>
+            <div>
+              I consent to being contacted by the team
+              <span class="required-icon">*</span>
+            </div>
+          </label>
+          <div class="err-message" aria-live="polite">
+            To submit this form, please consent to being contacted
+          </div>
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+      <div class="modal" aria-modal="true" role="dialog">
+        <h3><span class="right-icon">&check;</span> Message Sent!</h3>
+        <p>Thanks for completing the form. We'll be in touch soon!</p>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+      Coded by <a href="#">Shrawan Jangid</a>.
+    </div>
+  </footer>
+</body>
+<script src="script.js" defer></script>
+</html>
